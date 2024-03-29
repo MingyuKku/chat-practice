@@ -1,0 +1,96 @@
+@import url('./reset.css');
+@import url('./transition.css');
+@import url('./animation.css');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer components {
+
+    /* 버튼 */
+    .d-button-st {
+        @apply h-14 appearance-none border-none outline-none cursor-pointer 
+        flex items-center justify-center bg-button-default text-white text-[18px] font-medium;
+    }
+    .d-button-st > span {
+        @apply text-white text-[18px] font-medium;
+    }
+
+    /* 인풋 텍스트에어리어 등 */
+    .none-st {
+        @apply appearance-none outline-none bg-none bg-transparent;
+    }
+    .input-default-st {
+        @apply w-full h-10 p-second text-14p none-st rounded-[4px]
+        border border-[#E4E6EB] border-solid focus:border-mint;
+    }
+    .input-default-st::placeholder {
+        @apply text-gray4;
+    }
+
+    
+
+    /* 트랜스폼 */
+    .xy-center {
+        @apply top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2;
+    }
+    .x-center {
+        @apply left-1/2 -translate-x-1/2;
+    }
+    .y-center {
+        @apply top-1/2 -translate-y-1/2;
+    }
+}
+
+
+@layer utilities {
+    /* 스크롤바 유틸리티 */
+    .no-scrollbar {
+        -ms-overflow-style: none; /* 인터넷 익스플로러 */
+        scrollbar-width: none; /* 파이어폭스 */
+    }
+    .no-scrollbar::-webkit-scrollbar {
+        display: none;
+    }
+
+    .scrolling-touch {
+        -webkit-overflow-scrolling: touch;
+    }
+
+    /* .overscroll-none {
+        overscroll-behavior: none;
+    }
+
+    .overscroll-contain {
+        overscroll-behavior: contain;
+    } */
+    
+    /* .scrolling-touch::-webkit-scrollbar {
+        width: 6px;
+        border-radius: 16px;
+    }
+    .scrolling-touch::-webkit-scrollbar-thumb {
+        background: #a9a9a9;
+    } */
+    
+
+
+    /* 로딩 */
+    .loading-spin {
+        border: 5px solid #F55D07;
+        border-bottom-color: transparent;
+        border-radius: 50%;
+        animation: spin-rotation 1s linear infinite;
+    }
+
+
+
+    /* 인풋(input) 유틸리티 */
+    input.input-placeholder-text-15::placeholder {
+        font-size: 15px;
+        font-family: inherit;
+        color: #969696;
+    }
+}

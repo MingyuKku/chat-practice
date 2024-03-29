@@ -1,0 +1,79 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+i {
+    font-style: normal;
+}
+
+em {
+    font-style: normal;
+}
+
+input, 
+button, 
+select, 
+option, 
+textarea {
+    font-size: 16px;
+    font-family: 'Noto Sans KR', sans-serif;
+    -webkit-appearance: none;
+    appearance: none;
+    -webkit-border-radius: 0;
+    border: none;
+}
+
+input::placeholder,
+button::placeholder,
+select::placeholder,
+option::placeholder,
+textarea::placeholder {
+    font-size: inherit;
+    font-weight: inherit;
+    color: inherit;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+
+img {
+    display: block;
+    width: 100%;
+    font-size: 0;
+}
+
+
+.clearFix::after, 
+.clearFix::before {
+    display: block;
+    content: '';
+    clear: both;
+}
+
+html body {
+    letter-spacing: -0.3px;
+    /* position: fixed;
+    overflow: hidden;
+    width: 100%; */
+}
+
+html body {
+    width: 100%;
+    /* background: #F5F5F5; */
+    -webkit-text-size-adjust: none;
+    -webkit-tap-highlight-color: rgba(0,0,0, 0);
+}
+
+/* body {
+    overscroll-behavior: contain;
+} */
