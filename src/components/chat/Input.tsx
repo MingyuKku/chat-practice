@@ -27,23 +27,23 @@ const Input = () => {
 
     }, [])
 
-    React.useEffect(() => {
+    // React.useEffect(() => {
 
-        const { body } = document;
-        const { documentElement } = document;
+    //     const { body } = document;
+    //     const { documentElement } = document;
         
-        body.style.overscrollBehavior = 'contain';
-        documentElement.style.overscrollBehavior = 'contain';
+    //     body.style.overscrollBehavior = 'contain';
+    //     documentElement.style.overscrollBehavior = 'contain';
         
-        return () => {
-            body.style.overscrollBehavior = 'auto';
-            documentElement.style.overscrollBehavior = 'auto';
-        }
-    }, [])
+    //     return () => {
+    //         body.style.overscrollBehavior = 'auto';
+    //         documentElement.style.overscrollBehavior = 'auto';
+    //     }
+    // }, [])
 
     return (
         <div className={`
-            message-input-wrap sticky left-0 bottom-0 z-40 bg-white p-3.5 w-full
+            message-input-wrap fixed left-0 bottom-0 z-40 bg-white p-3.5 w-full
         `}>
             <div className="input-box">
                 <form

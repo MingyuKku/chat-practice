@@ -50,9 +50,11 @@ module.exports = {
                 'basic-header': '57px',
                 'gnb-bottom-header': '64px',
                 'viewScreen': 'calc(var(--vh,1vh)*100)',
+                'viewScreen-header': 'calc(var(--vh,1vh)*100 - 57px)',
             },
             minHeight: {
-                'viewScreen': 'calc(var(--vh,1vh)*100)'
+                'viewScreen': 'calc(var(--vh,1vh)*100)',
+                'viewScreen-header': 'calc(var(--vh,1vh)*100 - 57px)',
             },
             padding: {
                 'basic-header': '57px',

@@ -4,6 +4,7 @@ const Home = () => {
     return (
         <div>
             <h1>홈이다!!</h1>
+            <p>홈인가</p>
         </div>
     )
 }

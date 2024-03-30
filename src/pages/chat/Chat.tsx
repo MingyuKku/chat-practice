@@ -42,12 +42,15 @@ const Chat = () => {
     } 
 
     return (
-        <div className='flex flex-col'>
-            <MessageList
-                items={ messageItems.pages }
-            />
-            <MessageInput
-            />
+        <div className='flex flex-col h-viewScreen-header pb-gnb-bottom-header'>
+            <div className='overscroll-contain overflow-x-auto'>
+                <MessageList
+                    items={ messageItems.pages }
+                />
+                <MessageInput
+                />
+            </div>
+            
         </div>
     )
 }
