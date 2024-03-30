@@ -20,11 +20,14 @@ const App = () => {
   return (
     <div className='relative h-viewScreen'>
         <MainHeader />
-        <React.Suspense fallback={ <p>로딩중...</p> }>
+        <div className=''>
+          <React.Suspense fallback={ <p>로딩중...</p> }>
             <Routes>
                 { getRoute(routes) }
             </Routes>
-        </React.Suspense>
+          </React.Suspense>
+        </div>
+        
     </div>
   )
 }

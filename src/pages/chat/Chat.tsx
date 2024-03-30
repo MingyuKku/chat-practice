@@ -42,8 +42,8 @@ const Chat = () => {
     } 
 
     return (
-        <div className='flex flex-col h-viewScreen-header pb-gnb-bottom-header'>
-            <div className='overscroll-contain overflow-x-auto'>
+        <div className='flex flex-col'>
+            <div className='h-viewScreen overscroll-contain overflow-x-auto pt-basic-header pb-[66px]'>
                 <MessageList
                     items={ messageItems.pages }
                 />
