@@ -18,7 +18,7 @@ const App = () => {
 
 
   return (
-    <div className='pt-basic-header'>
+    <div className=''>
         <MainHeader />
         <React.Suspense fallback={ <p>로딩중...</p> }>
             <Routes>

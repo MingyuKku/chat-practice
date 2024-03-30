@@ -42,7 +42,7 @@ const Chat = () => {
     } 
 
     return (
-        <div className='pb-[66px] flex flex-col'>
+        <div className='flex flex-col'>
             <MessageList
                 items={ messageItems.pages }
             />

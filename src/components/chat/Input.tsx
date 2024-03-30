@@ -10,12 +10,40 @@ const Input = () => {
     const formRef = React.useRef<HTMLFormElement>(null);
     const inputElRef = React.useRef<HTMLInputElement>(null);
     const fakeInputElRef = React.useRef<HTMLInputElement>(null);
+    const [ focusFlag, setFocusFlag ] = React.useState(false);
 
+    
+    const onFocusHandler = React.useCallback((e: React.FocusEvent<HTMLInputElement>) => {
+        e.target.classList.add('on-focus');
 
+        setFocusFlag(true);
+        
+    }, [])
+
+    const onBlurHandler = React.useCallback((e: React.FocusEvent<HTMLInputElement>) => {
+        e.target.classList.remove('on-focus');
+        
+        setFocusFlag(false);
+
+    }, [])
+
+    React.useEffect(() => {
+
+        const { body } = document;
+        const { documentElement } = document;
+        
+        body.style.overscrollBehavior = 'contain';
+        documentElement.style.overscrollBehavior = 'contain';
+        
+        return () => {
+            body.style.overscrollBehavior = 'auto';
+            documentElement.style.overscrollBehavior = 'auto';
+        }
+    }, [])
 
     return (
         <div className={`
-            message-input-wrap fixed left-0 bottom-0 z-40 bg-white p-3.5 w-full
+            message-input-wrap sticky left-0 bottom-0 z-40 bg-white p-3.5 w-full
         `}>
             <div className="input-box">
                 <form
@@ -30,12 +58,14 @@ const Input = () => {
                         autoCorrect='off'
                         autoSave='off'
                         name={ inputName }
+                        onFocus={ onFocusHandler }
+                        onBlur={ onBlurHandler }
                         className='block w-full h-full none-st'
                     />
                     <input
                         ref={ fakeInputElRef }
                         type="text"
-                        className='fake-input absolute w-full opacity-0 top-full left-0'
+                        className='fake-input absolute w-full opacity-0 top-full left-0 h-0'
                     />
                     <button
                         // type='submit'
