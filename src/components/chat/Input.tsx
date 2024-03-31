@@ -47,19 +47,24 @@ const Input = () => {
 
 
 
-    // React.useEffect(() => {
-    //     if (!window.visualViewport) return;
+    React.useEffect(() => {
+        if (!window.visualViewport) return;
 
-    //     if (focusFlag) {
-    //         const { height } = window.visualViewport;
-    //         const { body } = document;
-    //         body.style.height = height - 200 + 'px';
-    //     }
-    // }, [focusFlag])
+        const { height } = window.visualViewport;
+        const { body } = document;
+
+        if (focusFlag) {
+            body.style.position = 'relative';
+            body.style.paddingTop = '57px';
+            // body.style.height = height - 200 + 'px';
+        } else {
+            body.removeAttribute('style');
+        }
+    }, [focusFlag])
 
     return (
         <div className={`
-            message-input-wrap fixed left-0 bottom-0 z-40 bg-white p-3.5 w-full
+            message-input-wrap sticky left-0 bottom-0 z-40 bg-white p-3.5 w-full
         `}>
             <div className="input-box">
                 <form

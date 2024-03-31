@@ -41,9 +41,10 @@ const Chat = () => {
         return <p>에러발생!</p>
     } 
 
+    
     return (
         <div className='
-            flex flex-col fixed top-0 left-0 w-full pt-basic-header pb-[128px]
+            flex flex-col fixed top-0 left-0 w-full pt-basic-header
             h-viewScreen overflow-y-auto overscroll-contain scrolling-touch
         '>
             <div className='overscroll-contain'>
