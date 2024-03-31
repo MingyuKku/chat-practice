@@ -2,6 +2,7 @@ import React from 'react';
 import { Routes } from 'react-router-dom';
 import routes, { getRoute } from './router/_index';
 import { useWebviewBridge } from 'hooks/useWebviewBridge';
+import MainHeader from 'components/_common/header/Main';
 
 const App = () => {
   useWebviewBridge(); // 웹뷰 통신 함수 등록
@@ -33,7 +34,8 @@ const App = () => {
 
   return (
     <div className=''>
-        <div className=''>
+        <MainHeader />
+        <div className='pt-basic-header'>
           <React.Suspense fallback={ <p>로딩중...</p> }>
             <Routes>
                 { getRoute(routes) }

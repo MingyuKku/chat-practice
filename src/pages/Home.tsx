@@ -4,7 +4,7 @@ import MainHeader from 'components/_common/header/Main';
 const Home = () => {
     return (
         <div>
-            <MainHeader/>
+            {/* <MainHeader/> */}
             <h1>홈이다!!</h1>
             <p>홈인가</p>
             <p>홈인가</p>

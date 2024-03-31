@@ -22,14 +22,14 @@ const Input = ({ changeStyle }: {
         e.target.classList.add('on-focus');
 
         setFocusFlag(true);
-        changeStyle(64+57+64);
+        // changeStyle(64+57+64);
     }, [])
 
     const onBlurHandler = React.useCallback((e: React.FocusEvent<HTMLInputElement>) => {
         e.target.classList.remove('on-focus');
         
         setFocusFlag(false);
-        changeStyle(0);
+        // changeStyle(0);
     }, [])
 
     // const windowScroll = () => {

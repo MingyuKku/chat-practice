@@ -58,12 +58,11 @@ const Chat = () => {
 
     
     return (
-        <div style={ chatWrapstyle } className='
-            flex flex-col fixed top-0 left-0 w-full pb-[64px]
+        <div className='
+            flex flex-col fixed top-0 left-0 w-full pt-basic-header pb-[64px]
             h-viewScreen overflow-y-auto overscroll-contain scrolling-touch
         '>
             <div className='overscroll-contain'>
-                <MainHeader />
                 <MessageList
                     items={ messageItems.pages }
                 />
