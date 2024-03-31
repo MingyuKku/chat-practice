@@ -22,7 +22,7 @@ const Input = ({ changeStyle }: {
         e.target.classList.add('on-focus');
 
         setFocusFlag(true);
-        changeStyle(64+57);
+        changeStyle(64+57+64);
     }, [])
 
     const onBlurHandler = React.useCallback((e: React.FocusEvent<HTMLInputElement>) => {
