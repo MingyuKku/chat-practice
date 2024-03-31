@@ -20,7 +20,7 @@ const App = () => {
   return (
     <div className=''>
         <MainHeader />
-        <div className='pt-basic-header pb-[64px]'>
+        <div className=''>
           <React.Suspense fallback={ <p>로딩중...</p> }>
             <Routes>
                 { getRoute(routes) }

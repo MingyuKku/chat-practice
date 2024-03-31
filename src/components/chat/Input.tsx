@@ -60,9 +60,9 @@ const Input = () => {
     }
 
     const visualViewportScroll = (e: Event) => {
-        e.preventDefault();
-        window.scrollTo(0,0);
-        document.body.scrollTop = 0;
+        // e.preventDefault();
+        // window.scrollTo(0,0);
+        // document.body.scrollTop = 0;
     }
 
     React.useEffect(() => {
@@ -77,6 +77,17 @@ const Input = () => {
         }
     }, [isBottom])
 
+
+
+    // React.useEffect(() => {
+    //     if (!window.visualViewport) return;
+
+    //     if (focusFlag) {
+    //         const { height } = window.visualViewport;
+    //         const { body } = document;
+    //         body.style.height = height - 200 + 'px';
+    //     }
+    // }, [focusFlag])
 
     return (
         <div className={`

@@ -42,8 +42,8 @@ const Chat = () => {
     } 
 
     return (
-        <div className='flex flex-col'>
-            <div className=''>
+        <div className='flex flex-col fixed top-0 left-0 w-full pt-basic-header pb-[64px] overflow-y-auto'>
+            <div className='h-viewScreen'>
                 <MessageList
                     items={ messageItems.pages }
                 />
