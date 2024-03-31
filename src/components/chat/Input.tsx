@@ -3,7 +3,9 @@ const IconMessage = React.lazy(() => import('components/icon/Arrow'));
 
 
 
-const Input = () => {
+const Input = ({ changeStyle }: {
+    changeStyle: (value: number) => void
+}) => {
     const inputName = 'message';
     const [ text, setText ] = React.useState('');
 
@@ -20,14 +22,14 @@ const Input = () => {
         e.target.classList.add('on-focus');
 
         setFocusFlag(true);
-        
+        changeStyle(64+57);
     }, [])
 
     const onBlurHandler = React.useCallback((e: React.FocusEvent<HTMLInputElement>) => {
         e.target.classList.remove('on-focus');
         
         setFocusFlag(false);
-
+        changeStyle(0);
     }, [])
 
     // const windowScroll = () => {
@@ -54,17 +56,13 @@ const Input = () => {
         const { body } = document;
 
         if (focusFlag) {
-            body.style.position = 'relative';
-            body.style.paddingTop = '57px';
-            // body.style.height = height - 200 + 'px';
         } else {
-            body.removeAttribute('style');
         }
     }, [focusFlag])
 
     return (
         <div className={`
-            message-input-wrap sticky left-0 bottom-0 z-40 bg-white p-3.5 w-full
+            message-input-wrap fixed left-0 bottom-0 z-40 bg-white p-3.5 w-full
         `}>
             <div className="input-box">
                 <form

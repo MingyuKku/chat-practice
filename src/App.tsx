@@ -1,7 +1,6 @@
 import React from 'react';
 import { Routes } from 'react-router-dom';
 import routes, { getRoute } from './router/_index';
-import MainHeader from './components/_common/header/Main';
 import { useWebviewBridge } from 'hooks/useWebviewBridge';
 
 const App = () => {
@@ -34,7 +33,6 @@ const App = () => {
 
   return (
     <div className=''>
-        <MainHeader />
         <div className=''>
           <React.Suspense fallback={ <p>로딩중...</p> }>
             <Routes>
