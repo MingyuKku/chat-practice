@@ -18,9 +18,9 @@ const App = () => {
 
 
   return (
-    <div className='relative h-viewScreen'>
+    <div className=''>
         <MainHeader />
-        <div className=''>
+        <div className='pt-basic-header pb-[64px]'>
           <React.Suspense fallback={ <p>로딩중...</p> }>
             <Routes>
                 { getRoute(routes) }

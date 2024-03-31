@@ -41,6 +41,31 @@ const Input = () => {
     //     }
     // }, [])
 
+    const windowScroll = () => {
+        const scrolledFromTop = window.scrollY;
+        const viewportHeight = window.innerHeight;
+        const totalPageHeight = document.documentElement.scrollHeight;
+
+        if (scrolledFromTop + viewportHeight >= totalPageHeight) {
+            alert('바닥!')
+        }
+    }
+
+    const visualViewportScroll = (e: Event) => {
+        e.preventDefault();
+        
+    }
+
+    React.useEffect(() => {
+        window.addEventListener('scroll', windowScroll, { passive: false });
+        window.visualViewport?.addEventListener('scroll', visualViewportScroll, { passive: false });
+
+        return () => {
+            window.removeEventListener('scroll', windowScroll);
+            window.visualViewport?.removeEventListener('scroll', visualViewportScroll);
+        }
+    }, [])
+
     return (
         <div className={`
             message-input-wrap fixed left-0 bottom-0 z-40 bg-white p-3.5 w-full
