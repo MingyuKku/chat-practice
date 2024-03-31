@@ -30,52 +30,20 @@ const Input = () => {
 
     }, [])
 
-    // React.useEffect(() => {
+    // const windowScroll = () => {
+    //     // if (!focusFlag) return;
 
-    //     const { body } = document;
-    //     const { documentElement } = document;
-        
-    //     body.style.overscrollBehavior = 'contain';
-    //     documentElement.style.overscrollBehavior = 'contain';
-        
-    //     return () => {
-    //         body.style.overscrollBehavior = 'auto';
-    //         documentElement.style.overscrollBehavior = 'auto';
+    //     const scrolledFromTop = window.scrollY;
+    //     const viewportHeight = window.innerHeight;
+    //     const totalPageHeight = document.documentElement.scrollHeight;
+
+    //     if (scrolledFromTop + viewportHeight >= totalPageHeight) {
+    //         // alert('바닥!')
+    //         setIsBottom(true);
+    //     } else {
+    //         if (isBottom) setIsBottom(false);
     //     }
-    // }, [])
-
-    const windowScroll = () => {
-        // if (!focusFlag) return;
-
-        const scrolledFromTop = window.scrollY;
-        const viewportHeight = window.innerHeight;
-        const totalPageHeight = document.documentElement.scrollHeight;
-
-        if (scrolledFromTop + viewportHeight >= totalPageHeight) {
-            // alert('바닥!')
-            setIsBottom(true);
-        } else {
-            if (isBottom) setIsBottom(false);
-        }
-    }
-
-    const visualViewportScroll = (e: Event) => {
-        // e.preventDefault();
-        // window.scrollTo(0,0);
-        // document.body.scrollTop = 0;
-    }
-
-    React.useEffect(() => {
-        window.addEventListener('scroll', windowScroll, { passive: false });
-        window.visualViewport?.addEventListener('scroll', visualViewportScroll, { passive: false });
-
-        // document.body.style.background = 'green';
-
-        return () => {
-            window.removeEventListener('scroll', windowScroll);
-            window.visualViewport?.removeEventListener('scroll', visualViewportScroll);
-        }
-    }, [isBottom])
+    // }
 
 
 
