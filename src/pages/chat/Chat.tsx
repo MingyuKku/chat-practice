@@ -42,8 +42,11 @@ const Chat = () => {
     } 
 
     return (
-        <div className='flex flex-col fixed top-0 left-0 w-full pt-basic-header pb-[64px] overflow-y-auto overscroll-contain'>
-            <div className='h-viewScreen overscroll-contain'>
+        <div className='
+            flex flex-col fixed top-0 left-0 w-full pt-basic-header pb-[64px]
+            h-viewScreen overflow-y-auto overscroll-contain scrolling-touch
+        '>
+            <div className=' overscroll-contain'>
                 <MessageList
                     items={ messageItems.pages }
                 />

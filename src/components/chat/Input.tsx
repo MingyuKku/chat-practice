@@ -69,7 +69,7 @@ const Input = () => {
         window.addEventListener('scroll', windowScroll, { passive: false });
         window.visualViewport?.addEventListener('scroll', visualViewportScroll, { passive: false });
 
-        document.body.style.background = 'green';
+        // document.body.style.background = 'green';
 
         return () => {
             window.removeEventListener('scroll', windowScroll);
