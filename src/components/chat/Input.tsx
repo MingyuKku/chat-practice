@@ -52,7 +52,7 @@ const Input = () => {
         const totalPageHeight = document.documentElement.scrollHeight;
 
         if (scrolledFromTop + viewportHeight >= totalPageHeight) {
-            alert('바닥!')
+            // alert('바닥!')
             setIsBottom(true);
         } else {
             if (isBottom) setIsBottom(false);
